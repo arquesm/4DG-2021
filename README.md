@@ -16,16 +16,13 @@ Escola d'Art i Superior de Disseny d'Alcoi
 * Martínez	López,	Lucía
 * Miró	Bernabeu,	Sergio
 * Navalón Beltrán,	Cristina
-* Torrecillas	Garrido,	Marina
 * Valero	Jiménez,	Francisca
 
 ### Grup B
 
 * Baldó	Garcia,	Natalia
-* Beltrán	Adriá,	Laura
 * Benavent	Codina,	Miguel
 * García	Marfil,	Clara
-* Garzó Reig,	Silvia
 * Giménez	García,	Omar
 * Gisbert	Martín	del	Burgo,	India
 * Jordá	Pintado,	Rebeca
