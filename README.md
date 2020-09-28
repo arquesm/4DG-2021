@@ -11,7 +11,7 @@ Escola d'Art i Superior de Disseny d'Alcoi
 * Climent	Such,	Francisco
 * Escolano	Gómez,	Sofía
 * Fernández	Ferrero,	Ángel
-* Gordillo	Santos,	Antonio
+* Gordillo	Santos,	Rafael Antonio
 * Jérez	García,	Claudia
 * Martínez	López,	Lucía
 * Miró	Bernabeu,	Sergio
