@@ -35,7 +35,7 @@ Escola d'Art i Superior de Disseny d'Alcoi
 ### 1a setmana.
  * Presentació.
  * Primer treball [Monografia](https://arduino.comparteix.net/Main/Monografia) a presentar entre el 15-16 d'octubre.
- * Realització dels esbossos d'un retrat a partir de les formes primitives 2d, trobareu especificades al següent enllaç a l'apartat privites 2d. https://processing.org/reference/ 
+ * Realització dels esbossos d'un retrat a partir de les formes primitives 2d, trobareu especificades al següent enllaç a l'apartat primiitives 2d. https://processing.org/reference/ 
  
 ### 2a setmana.
 * Treball dels esbossos en digital utilitzant Processing.
