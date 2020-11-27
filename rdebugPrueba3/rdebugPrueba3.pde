@@ -102,20 +102,19 @@ void setRandSpeeds()
 }
 
 
-void keyPressed()
-{
-  if( keyCode == KeyEvent.VK_C ) 
+void keyPressed() {
+  if ( keyCode == CODED ) 
   {
     setRandColors();
-  } else if( keyCode == KeyEvent.VK_B )
+  } else if ( keyCode == UP )
   {
     fondo = color( random(255), random(255), random(255) );
-  } else if( keyCode == KeyEvent.VK_V )
+  } else if ( keyCode == DOWN )
   {
     setRandSpeeds();
-  } else if ( keyCode == KeyEvent.VK_A )
+  } else if ( keyCode == RIGHT )
   {
-    
+
     Arco b = new Arco((int)( random(width)/2.0 ));
     b.offsetX = (int)(width / 2);
     b.offsetY = (int)(height / 2);
@@ -124,30 +123,22 @@ void keyPressed()
     b.randColor();
     b.randRadioGiro();
     b.randRadio();
-    
+
     arcos.add( b );
-    
-  } else if ( keyCode == KeyEvent.VK_Z )
-  {
-    
-    if( arcos.size() > 1 )
-    {
+  } else if ( keyCode == CODED ) {
+    if ( arcos.size() > 1 ) {
       arcos.remove( arcos.get(0) );
     }
-    
-  } else if ( keyCode == KeyEvent.VK_T )
+  } else if ( keyCode == UP )
   {
-//    clearScreen =  !clearScreen ;
-  } else if ( keyCode == KeyEvent.VK_G )
+    //    clearScreen =  !clearScreen ;
+  } else if ( keyCode == DOWN )
   {
     setRandRadiosGiro();
-  } else if ( keyCode == KeyEvent.VK_R )
+  } else if ( keyCode == RIGHT )
   {
     setRandRadios();
   }
-  
-  
-  
 }
   
   
