@@ -43,6 +43,7 @@ void draw() {
   }
   endShape();
   rotateY(frameCount * PI/100);
+  saveFrame("livealcode_img"+"###"+".png");
 }
 
 void mousePressed() {
@@ -75,7 +76,7 @@ void setRandSpeeds() {
     Arco b = (Arco)arcos.get(i);
     b.randSpeed();
   }
-  saveFrame("livealcode_img"+"###"+".png");
+
 }
 
 
