@@ -1,17 +1,19 @@
-import processing.opengl.*;
+import processing.pdf.*;
 
 color[] paleta={color(175, 0, 250), color(255, 242, 0), color(0)};
 ArrayList arcos = new ArrayList();
 color fondo = color(255, 255, 255);
 boolean clearScreen = true ; 
+boolean record;
 
 void setup() {
-  background(paleta[1], 8.9);  
-  size(600, 600, OPENGL);
 
+  background(paleta[1], 8.9);  
+  size(600, 600, P3D);
   frameRate(60);
   noSmooth();  
   strokeWeight(60);
+  strokeCap(PROJECT);
   //noStroke();
   for ( int i = 0; i < 20; i ++ ) {
     Arco b = new Arco( int(random(width/2.0)));
@@ -24,17 +26,13 @@ void setup() {
 }
 
 void draw() {
-
+  if (record) {
+    beginRaw(PDF, "output2.pdf");
+  }
 
   lights();
-
-  if ( mousePressed ) {
-    translate( mouseX, mouseY ) ;
-  } else {
-    translate(width / 2, height / 2);
-  }
+  translate(width / 2, height / 2);
   noStroke();
-
   beginShape(LINES);
   for ( int i = 0; i < 20; i++ ) {
     Arco b = (Arco)arcos.get(i);
@@ -43,7 +41,10 @@ void draw() {
   }
   endShape();
   rotateY(frameCount * PI/100);
-  saveFrame("livealcode_img"+"###"+".png");
+  if (record) {
+    endRaw();
+    record = false;
+  }
 }
 
 void mousePressed() {
@@ -97,6 +98,9 @@ void keyPressed() {
     b.randRadio();
     arcos.add( b );
   }
+  if (key == 'r') {
+    record = true;
+  }
 }
 
 
@@ -137,7 +141,6 @@ class Arco {
   }
 
   void randColor() {
-    //frente = color( random(255), random(255), random(255) );
     frente = paleta[int(random(paleta.length))];
   }
 
@@ -165,8 +168,5 @@ class Arco {
 
     x1 = int( radioDeGiro * cos( anguloActual + anguloCentral ) ) ;
     y1 = int( radioDeGiro * sin( anguloActual + anguloCentral ) ) ;
-
-    /*z = int( radioDeGiro * sin( anguloActual + anguloCentral )) ;
-     z1 = int( radioDeGiro * sin( anguloActual + anguloCentral )) ;*/
   }
 }
